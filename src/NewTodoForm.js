@@ -16,7 +16,7 @@ class NewTodoForm extends Component {
   }
   handleSubmit(evt) {
     evt.preventDefault();
-    if(this.state.task==""){
+    if(this.state.task===""){
       alert(`You can't add empty task`);
       return;
     }
