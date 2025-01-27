@@ -1,0 +1,113 @@
+.Todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .Todo-task {
+    position: relative;
+    transition: opacity 0.4s linear;
+    flex: 1;
+    margin-right: 1rem;
+  }
+  
+  .Todo-task li {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    list-style: none;
+    overflow: hidden;
+    word-break: break-word;
+    cursor: pointer;
+  }
+  
+  .Todo.completed {
+    opacity: 0.7;
+  }
+  
+  .Todo.completed .Todo-task{
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  .Todo-buttons {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .Todo-buttons button {
+    border: none;
+    font-size: 1em;
+    margin: 0.4em;
+    background: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.2s;
+  }
+  
+  .Todo-buttons button:hover {
+    color: #ff6666;
+    transform: scale(1.1);
+  }
+  
+  .Todo-edit-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .Todo-edit-form input {
+    flex: 1;
+    background: #f7f1f1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    margin-right: 1rem;
+  }
+  
+  .Todo-edit-form button {
+    padding: 0.5rem 1.3rem;
+    border: none;
+    background: #ff6666;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background 0.2s ease-out;
+    flex-shrink: 0;
+  }
+  
+  .Todo-edit-form button:hover {
+    background: #ff5e5e;
+  }
+  
+  /* Transition Animations */
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
