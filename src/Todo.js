@@ -26,6 +26,10 @@ class Todo extends Component {
 
   handleUpdate(evt) {
     evt.preventDefault();
+    if(this.state.task==""){
+      alert(`You can't add empty task`);
+      return;
+    }
     this.props.updateTodo(this.props.id, this.state.task);
     this.setState({ isEditing: false });
   }
